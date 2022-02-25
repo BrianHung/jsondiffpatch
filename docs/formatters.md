@@ -39,7 +39,7 @@ Html can be generated sever-side the same way, just remember to include (or embe
 Console
 -------
 
-Node.js colored output (thanks to [chalk](https://github.com/sindresorhus/chalk)!).
+Node.js colored output (thanks to [picocolors](https://github.com/alexeyraspopov/picocolors)!).
 It's used by the CLI:
 
 ![console_demo!](../docs/demo/consoledemo.png)

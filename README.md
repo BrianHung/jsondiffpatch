@@ -261,7 +261,7 @@ Console
 --------
 
 ``` sh
-# diff two json files, colored output (using chalk lib)
+# diff two json files, colored output (using picocolors lib)
 ./node_modules/.bin/jsondiffpatch ./left.json ./right.json
 
 # or install globally

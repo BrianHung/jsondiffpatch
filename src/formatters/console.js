@@ -1,9 +1,9 @@
-import chalk from 'chalk';
+import pico from 'picocolors';
 import BaseFormatter from './base';
 
-function chalkColor(name) {
+function picoColor(name) {
   return (
-    (chalk && chalk[name]) ||
+    (pico && pico[name]) ||
     function(...args) {
       return args;
     }
@@ -11,13 +11,13 @@ function chalkColor(name) {
 }
 
 let colors = {
-  added: chalkColor('green'),
-  deleted: chalkColor('red'),
-  movedestination: chalkColor('gray'),
-  moved: chalkColor('yellow'),
-  unchanged: chalkColor('gray'),
-  error: chalkColor('white.bgRed'),
-  textDiffLine: chalkColor('gray'),
+  added: picoColor('green'),
+  deleted: picoColor('red'),
+  movedestination: picoColor('gray'),
+  moved: picoColor('yellow'),
+  unchanged: picoColor('gray'),
+  error: picoColor('white')(picoColor('bgRed')),
+  textDiffLine: picoColor('gray'),
 };
 
 class ConsoleFormatter extends BaseFormatter {
